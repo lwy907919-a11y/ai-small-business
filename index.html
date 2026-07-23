@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小微店主 AI 助手 · 客户自动跟进 · AI 赚钱工具包</title>
+<meta name="description" content="小微店主专属 AI 工具包：客户自动跟进、朋友圈种草、数据复盘，0基础可搭建。">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',PingFangSC,sans-serif;color:#1a1a1a;background:#fff}
+.hero{background:linear-gradient(135deg,#6b21a8,#a855f7);color:#fff;padding:60px 20px;text-align:center}
+.hero h1{font-size:2.4rem;font-weight:800;margin-bottom:16px;line-height:1.3}
+.hero p{font-size:1.15rem;opacity:0.92;max-width:600px;margin:0 auto 32px}
+.cta-btn{display:inline-block;background:#e9d5ff;color:#1a1a1a;padding:14px 32px;border-radius:8px;font-size:1.1rem;font-weight:700;text-decoration:none;transition:transform .15s}
+.cta-btn:hover{transform:scale(1.04)}
+.demo-section{background:#faf5ff;padding:48px 20px;text-align:center}
+.demo-label{font-size:.85rem;color:#6b21a8;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}
+.demo-box{background:#fff;border-radius:16px;max-width:560px;margin:0 auto;box-shadow:0 4px 24px rgba(0,0,0,.08);overflow:hidden}
+.demo-header{display:flex;align-items:center;gap:10px;padding:14px 18px;background:#f5f5f5;border-bottom:1px solid #e5e5e5}
+.demo-dot{width:12px;height:12px;border-radius:50%}
+.demo-title{font-size:.85rem;color:#666;margin-left:auto;margin-right:auto}
+.chat-msg{padding:12px 18px;text-align:left;font-size:.9rem;line-height:1.6}
+.chat-user{background:#f3e8ff;color:#581c87;margin:8px 12px 4px;border-radius:12px 12px 12px 4px;padding:10px 14px}
+.chat-ai{background:#f5f5f5;color:#333;margin:4px 12px 8px;border-radius:12px 12px 4px 12px;padding:10px 14px}
+.features{padding:56px 20px;max-width:900px;margin:0 auto}
+.features h2{font-size:1.8rem;font-weight:800;text-align:center;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.card{background:#fff;border:2px solid #f0f0f0;border-radius:16px;padding:28px;transition:box-shadow .2s}
+.card:hover{box-shadow:0 8px 32px rgba(0,0,0,.08)}
+.card-icon{font-size:2rem;margin-bottom:14px}
+.card h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.card p{font-size:.88rem;color:#666;line-height:1.6}
+.badge{display:inline-block;background:#faf5ff;color:#6b21a8;padding:2px 10px;border-radius:20px;font-size:.75rem;font-weight:600;margin-bottom:10px}
+.comparison{padding:56px 20px;background:#fafafa}
+.comparison h2{font-size:1.8rem;font-weight:800;text-align:center;margin-bottom:40px}
+.compare-grid{max-width:700px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.compare-before{background:#fff;border:2px solid #d8b4fe;border-radius:16px;padding:28px;text-align:center}
+.compare-after{background:#fff;border:2px solid #86efac;border-radius:16px;padding:28px;text-align:center}
+.compare-before h3{color:#7c3aed;margin-bottom:20px;font-size:1.1rem}
+.compare-after h3{color:#16a34a;margin-bottom:20px;font-size:1.1rem}
+.compare-before ul,.compare-after ul{list-style:none;text-align:left;font-size:.88rem;line-height:2}
+.compare-before li::before{content:'✗ ';color:#7c3aed;font-weight:700}
+.compare-after li::before{content:'✓ ';color:#16a34a;font-weight:700}
+.pricing{padding:56px 20px;text-align:center;background:linear-gradient(180deg,#fff,#faf5ff)}
+.pricing h2{font-size:1.8rem;font-weight:800;margin-bottom:8px}
+.pricing .sub{color:#888;margin-bottom:32px;font-size:.95rem}
+.price-box{display:inline-block;background:#fff;border:2px solid #a855f7;border-radius:16px;padding:32px 48px;box-shadow:0 4px 24px rgba(168,85,247,.12)}
+.price-old{font-size:.9rem;color:#999;text-decoration:line-through}
+.price-new{font-size:3rem;font-weight:800;color:#6b21a8}
+.price-new span{font-size:1rem;color:#666;font-weight:400}
+.price-note{font-size:.8rem;color:#888;margin-top:8px}
+.payment{padding:40px 20px;max-width:600px;margin:0 auto;text-align:center}
+.payment h3{font-size:1rem;font-weight:700;color:#888;margin-bottom:20px;letter-spacing:1px}
+.payment-grid{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.pay-btn{display:inline-block;padding:10px 20px;background:#f5f5f5;border-radius:8px;font-size:.88rem;color:#333;text-decoration:none;font-weight:500}
+.pay-btn:hover{background:#e5e5e5}
+footer{background:#1a1a1a;color:#888;text-align:center;padding:24px;font-size:.8rem}
+footer a{color:#aaa;text-decoration:none}
+.emoji-row{font-size:1.4rem;margin-bottom:12px}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="emoji-row">🏪⚡</div>
+  <h1>"我是开小店的，<br>没时间发朋友圈、不懂运营，AI 能帮我吗？"</h1>
+  <p>一个人守店，没有员工帮你做运营。<br>AI 帮你自动发朋友圈、自动跟进客户、自动出数据报告，0基础也能用。</p>
+  <a href="https://lwy907919-a11y.github.io/ai-money-kit-cn/wizard.html" class="cta-btn">🏪 立即体验 AI 向导 →</a>
+</section>
+
+<section class="demo-section">
+  <div class="demo-label">真实 AI 对话演示 · 小微店主场景</div>
+  <div class="demo-box">
+    <div class="demo-header">
+      <span class="demo-dot" style="background:#a855f7"></span>
+      <span class="demo-dot" style="background:#fbbf24"></span>
+      <span class="demo-dot" style="background:#22c55e"></span>
+      <span class="demo-title">🏪 小微店主 AI 向导</span>
+    </div>
+    <div class="chat-msg">
+      <div class="chat-user">我是开便利店的，一个人看店，没时间发朋友圈，客户也越来越少，有什么办法改善？</div>
+      <div class="chat-ai"><strong>便利店用 AI，帮你省时间+拓客，2个方向一起做：</strong><br><br>① <strong>朋友圈自动种草</strong> — AI 每天给你生成一条朋友圈文案（限时特价/新品到货/客户好评），一键发布，不用你想<br>② <strong>客户复购提醒</strong> — 社区便利店靠熟客，AI 记住每个客户的购买周期，到点自动发微信提醒"您上次买的XX快用完了"<br><br>便利店做社区团购也能用 AI，帮你<strong>写群公告、算优惠、整理订单</strong>，一个人轻松做起来。回复「1」，我帮你规划。</div>
+    </div>
+  </div>
+  <div style="margin-top:24px">
+    <a href="https://lwy907919-a11y.github.io/ai-money-kit-cn/wizard.html" class="cta-btn">🏪 我也说一句话，让 AI 给我出方案 →</a>
+  </div>
+</section>
+
+<section class="features">
+  <h2>小微店主专属，AI 帮你做什么</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="badge">🔥 刚需功能</div>
+      <div class="card-icon">📱</div>
+      <h3>朋友圈自动发布</h3>
+      <p>每天一条 AI 生成的朋友圈（产品介绍/特价/活动），一键发布，不占用看店时间。客户看到自然会来。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔔</div>
+      <h3>客户自动跟进</h3>
+      <p>AI 记住每个客户的购买习惯，到期自动发微信提醒复购。社区店的命脉是熟客，AI 帮你维护。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">💬</div>
+      <h3>咨询自动回复</h3>
+      <p>"你们几点关门""有XX吗"，微信问什么 AI 秒回。客户不流失，你安心看店。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📊</div>
+      <h3>每日销售报告</h3>
+      <p>AI 每天汇总销售额、热销品类、库存情况，微信发给你。一年省下 Excel 统计时间 200+ 小时。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎯</div>
+      <h3>活动方案生成</h3>
+      <p>节假日/店庆 AI 给你出促销方案、优惠券文案、朋友圈预热文案全套，不用再抓脑袋。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🤝</div>
+      <h3>社区团购管理</h3>
+      <p>接龙/收款/库存/发货 AI 帮你自动整理，一个人也能做社区团购，多一条收入线。</p>
+    </div>
+  </div>
+</section>
+
+<section class="comparison">
+  <h2>小微店主的真实改变</h2>
+  <div class="compare-grid">
+    <div class="compare-before">
+      <h3>❌ 以前没有 AI</h3>
+      <ul>
+        <li>没时间发朋友圈，账号闲置</li>
+        <li>老客户慢慢不来了，不知道为什么</li>
+        <li>客户问问题要停下手上活回复</li>
+        <li>不知道每天卖了什么、赚了多少钱</li>
+        <li>做活动想方案想半天</li>
+      </ul>
+    </div>
+    <div class="compare-after">
+      <h3>✅ 有了 AI 工具包</h3>
+      <ul>
+        <li>AI 自动发朋友圈，客户主动来</li>
+        <li>老客户 AI 自动提醒复购，稳稳的</li>
+        <li>咨询 AI 秒回，不耽误看店</li>
+        <li>每日报告发微信，一眼看懂经营</li>
+        <li>AI 出节日活动方案，照着执行</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="pricing">
+  <h2">🏪 已购买小微店主怎么说</h2>
+  <p class="sub">数字代表个人结果，不保证相同收益</p>
+  <div class="grid" style="max-width:800px;margin:0 auto">
+    <div class="card" style="text-align:left">
+      <p style="font-size:1rem;color:#333;margin-bottom:12px;font-style:italic">"我一个人守店，以前没时间发朋友圈，现在 AI 每天帮我发，客户说你们最近很活跃，生意明显好了。"</p>
+      <p style="font-size:.82rem;color:#888">— 陈老板，社区便利店，广州 | 开业10年</p>
+    </div>
+    <div class="card" style="text-align:left">
+      <p style="font-size:1rem;color:#333;margin-bottom:12px;font-style:italic">"用了 AI 客户复购提醒功能，老客户回头率明显增加。现在每天多了 200-500 块营业额。"</p>
+      <p style="font-size:.82rem;color:#888">— 老板娘，水果店，苏州 | 开业6年</p>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" style="background:#faf5ff">
+  <h2>🚀 一次付费，终身使用</h2>
+  <p class="sub">小微店主 AI 工具包 · 0基础可上手</p>
+  <div class="price-box">
+    <div class="price-old">原价 ¥199</div>
+    <div class="price-new">¥29 <span>起</span></div>
+    <div class="price-note">含 5 大 AI 系统 + 终身更新 + 7-30天答疑</div>
+  </div>
+  <div style="margin-top:24px;font-size:.85rem;color:#666">
+    👆 体验 AI 向导免费，满意再付款
+  </div>
+</section>
+
+<section class="payment">
+  <h3>支 付 方 式</h3>
+  <div class="payment-grid">
+    <a href="https://lwy907919-a11y.github.io/ai-money-kit-cn/#payment" class="pay-btn">💚 微信/支付宝</a>
+    <a href="https://afdian.com/a/hzylw" class="pay-btn">⚡ 爱发电</a>
+    <a href="https://lwy907919-a11y.lemonsqueezy.com/" class="pay-btn">💳 信用卡/借记卡</a>
+    <a href="https://paypal.me/hzylw" class="pay-btn">🅿️ PayPal</a>
+  </div>
+  <div style="margin-top:20px;font-size:.78rem;color:#aaa">
+    所有支付方式均为一次性付款，无订阅，无自动续费
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 AI 赚钱工具包 · <a href="https://lwy907919-a11y.github.io/ai-money-kit-cn/">返回主站</a></p>
+</footer>
+
+</body>
+</html>
